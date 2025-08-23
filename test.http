@@ -1,0 +1,32 @@
+### Signup
+POST http://127.0.0.1:6000/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Test User3",
+  "email": "testuser3@example.com",
+  "password": "TestPassword1234"
+}
+
+### Login
+POST http://127.0.0.1:6000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "YourAdminPassword123"
+}
+
+### Get All Products
+GET http://localhost:6000/api/products
+### Add Product (Admin only)
+POST http://localhost:6000/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGE4NmE2MjdiMWI1M2Q3OTMzYTMzOWYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTU4NzAwOTEsImV4cCI6MTc1NjA0Mjg5MX0.reFKsBcOLkhmHQUDjJMqyj_6cwKelVwMVLdrhrBhJF0
+
+{
+  "name": "Product 1",
+  "description": "Description for product 1",
+  "price": 199.99,
+  "stockQuantity": 100
+}
